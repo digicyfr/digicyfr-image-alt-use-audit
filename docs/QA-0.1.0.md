@@ -54,3 +54,10 @@ This automated check did not find a plugin-owned defect, so the `v0.1.0` ZIP, ta
 ## Stable self-hosted release decision — 2026-11-05
 
 The public ZIP and sidecar were verified again at SHA-256 `fcfe2ea4d925a078edfc722c27361bfbcc58ae0acee9d97c88c6b10c490e9385`; all 14 packaged files matched source. The protected `release/0.1.0` branch and `v0.1.0` tag matched, and their CI plus the latest main CI passed. The exact-ZIP browser and automated accessibility evidence above supports stable self-hosted publication with its documented scope limits. Human screen-reader and representative content checks were not performed; this decision does not claim WCAG conformance or WordPress.org approval. The ZIP, tag and release branch bytes remain unchanged.
+
+## Live Digicyfr website delivery — 5 November 2026
+
+- The live [English](https://www.digicyfr.com/en/wordpress-plugins/digicyfr-image-alt-use-audit) and [Polish](https://www.digicyfr.com/pl/wordpress-plugins/digicyfr-image-alt-use-audit) pages both returned HTTP 200, with the current stable v0.1.0 ZIP link, matching SHA-256, screenshot and canonical metadata; neither carried `noindex`. Both URLs appeared in the live sitemap.
+- The live screenshot URL `/images/wordpress-plugins/digicyfr-image-alt-use-audit.png` returned a PNG. `https://digicyfr.com/plugins/digicyfr-image-alt-use-audit/` followed the `Update URI` redirect to the English detail page.
+- Following the ZIP and checksum links from the live pages returned the unchanged public GitHub release asset and sidecar. ZIP SHA-256: `fcfe2ea4d925a078edfc722c27361bfbcc58ae0acee9d97c88c6b10c490e9385`. The same public ZIP hash had already passed the clean install and plugin-specific checks in this QA record; no new clean install was run for this site-delivery audit.
+- Website production commit: [`9dfb9728`](https://github.com/digicyfr/cyfr/commit/9dfb9728c92e7d4437cfe2f8368b54ce917c0008). Distribution remains a manual ZIP install/update; this is not a WordPress.org or automatic-update claim. Human screen-reader and representative-host checks remain follow-up work for broader claims.
