@@ -2,6 +2,16 @@
 
 A free, GPL-licensed WordPress plugin that locates the `alt` attribute saved on each `<img>` use in published posts and pages. It is a local, read-only inventory for editors. It does not edit alt text, fetch public pages, generate descriptions, or judge whether an image is decorative. English and Polish strings are bundled.
 
+## Website guides and stable release
+
+- [Image Alt Use Audit: English overview and installation](https://www.digicyfr.com/en/wordpress-plugins/digicyfr-image-alt-use-audit)
+- [Przegląd tekstów alt obrazów: opis i instalacja po polsku](https://www.digicyfr.com/pl/wordpress-plugins/digicyfr-image-alt-use-audit)
+- [Stable v0.1.0 release, ZIP and checksum](https://github.com/digicyfr/digicyfr-image-alt-use-audit/releases/tag/v0.1.0)
+
+<a href="https://www.digicyfr.com/en/wordpress-plugins/digicyfr-image-alt-use-audit"><img src="https://www.digicyfr.com/images/wordpress-plugins/digicyfr-image-alt-use-audit.png" alt="Image alt use report showing saved image findings" width="520"></a>
+
+_Example screenshot from a disposable test site._
+
 ## Install and use
 
 1. Upload the release ZIP at **Plugins → Add New → Upload Plugin** and activate it. Requires WordPress 7.1+ and PHP 8.3+ with InnoDB available for three plugin-owned tables.
@@ -19,7 +29,7 @@ Runs have `queued`, `running`, `complete`, `complete_with_skips`, `failed`, or `
 
 **Storage and retention:** Three site-prefixed InnoDB tables store run state, saved-use rows, and coverage/skip reasons. They may contain post titles by reference, alt previews, and bounded image host/path hints; URLs' query strings, fragments, credentials, signed parameters, data URLs and image bytes are not stored. Deactivation retains tables and reports. When a new run starts or completes, older runs/rows are pruned while retaining the latest complete report and latest run. A cancelled/failed run stays visible until the next run starts. **Uninstall drops all three plugin-owned tables and options permanently.** Export a needed report before uninstall.
 
-**Updates:** Version 0.1.0 uses manual ZIP updates from its GitHub release (and Digicyfr site mirror when published). Its unique Update URI prevents unrelated directory updates; no automatic update endpoint exists yet.
+**Updates:** Version 0.1.0 uses manual ZIP updates from its GitHub release, linked from the Digicyfr plugin page. Its unique Update URI prevents unrelated directory updates; no automatic update endpoint exists yet.
 
 ## Development
 
