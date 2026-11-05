@@ -2,7 +2,7 @@
 
 ## Current GitHub repository candidate (2026-11-05)
 
-- ZIP: `digicyfr-image-alt-use-audit-0.1.0.zip` from the public GitHub `v0.1.0` prerelease; the local release candidate has the same SHA-256.
+- ZIP: `digicyfr-image-alt-use-audit-0.1.0.zip` from the public GitHub `v0.1.0` release; the local candidate has the same SHA-256.
 - SHA-256: `fcfe2ea4d925a078edfc722c27361bfbcc58ae0acee9d97c88c6b10c490e9385`
 - The new repository snapshot adds a per-plugin GitHub `Plugin URI`, updates packaged README instructions, and adds standalone build/verification tools, Docker harness, CI, contribution/security policies and release notes outside the ZIP. Scanner, storage, authorization and admin behavior are unchanged.
 - Both standalone and workspace `verify_zip.py --against-source` passed on this ZIP; its `.sha256` sidecar passed. PHP and JavaScript syntax checks passed.
@@ -43,7 +43,7 @@
 
 - This audit checks saved `post_content` only. It does not inspect rendered theme output, dynamic blocks, synced block contents, CSS backgrounds, widgets, templates, page-builder data outside `post_content`, or every public filter. A `complete_with_skips`, failed, cancelled, or active run cannot establish that the site is clear.
 - The scan is a high-water ID walk, not an immutable publication snapshot. Published status and edits may change while it runs. Source rows become stale or deleted after later changes.
-- A public GitHub prerelease exists. No digicyfr.com production publication, WordPress.org submission, or live customer-site installation was performed.
+- A public GitHub stable self-hosted release exists. No digicyfr.com production publication, WordPress.org submission, or live customer-site installation was performed.
 
 ## Automated accessibility audit on the public ZIP — 2026-11-05
 
