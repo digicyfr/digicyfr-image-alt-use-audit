@@ -1,0 +1,61 @@
+{
+  "date_utc": "2026-11-05",
+  "artifact": "exact public GitHub v0.1.0 ZIP; downloaded SHA sidecar passed",
+  "stack": "WordPress 7.1 / PHP 8.3.33 / MariaDB 11.4.13; WooCommerce 11.2.2 for Woo plugins",
+  "browser": "Chromium 156.0.8078.4 via Playwright",
+  "axe_core": "4.10.3",
+  "axe_rules": "wcag2a,wcag2aa,wcag21a,wcag21aa,wcag22aa",
+  "scope": "automated checks only; no human screen-reader session",
+  "sha256": "fcfe2ea4d925a078edfc722c27361bfbcc58ae0acee9d97c88c6b10c490e9385",
+  "screens": [
+    {
+      "name": "alt-overview",
+      "violations": [],
+      "incomplete": [],
+      "passes": 11,
+      "width": {
+        "viewport": 390,
+        "document": 390
+      }
+    },
+    {
+      "name": "alt-report",
+      "violations": [],
+      "incomplete": [
+        "color-contrast"
+      ],
+      "passes": 16,
+      "width": {
+        "viewport": 390,
+        "document": 390
+      }
+    }
+  ],
+  "full_report": {
+    "name": "alt",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "targets": [
+          [
+            "#diau-state"
+          ]
+        ]
+      }
+    ],
+    "passes": 30,
+    "width": {
+      "viewport": 390,
+      "document": 390
+    }
+  },
+  "keyboard": {
+    "alt_state_to_post_id": true,
+    "cdp_alt_state_name": "Alt state"
+  },
+  "baseline": {
+    "wp_dashboard_full_page_violations": 0
+  },
+  "incomplete_note": "Axe could not determine contrast of the WordPress native Alt state select because its background uses an image."
+}

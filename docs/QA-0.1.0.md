@@ -44,3 +44,9 @@
 - This audit checks saved `post_content` only. It does not inspect rendered theme output, dynamic blocks, synced block contents, CSS backgrounds, widgets, templates, page-builder data outside `post_content`, or every public filter. A `complete_with_skips`, failed, cancelled, or active run cannot establish that the site is clear.
 - The scan is a high-water ID walk, not an immutable publication snapshot. Published status and edits may change while it runs. Source rows become stale or deleted after later changes.
 - A public GitHub prerelease exists. No digicyfr.com production publication, WordPress.org submission, or live customer-site installation was performed.
+
+## Automated accessibility audit on the public ZIP — 2026-11-05
+
+The exact public ZIP and SHA sidecar above were verified again, then installed on a fresh disposable WordPress 7.1 / PHP 8.3.33 site with synthetic saved image content. Chromium 156.0.8078.4 and axe-core 4.10.3 ran the WCAG 2/2.1/2.2 A/AA rule tags on the scan overview and completed report. Both plugin regions had **zero axe violations**; the completed report also had zero full-page violations, matching the WordPress Dashboard baseline. At 390px, both screens had document width 390px. Keyboard Tab moved from the labelled **Alt state** select to **Post ID**, and Chromium's accessibility tree exposed the select as a named combobox. Axe could not determine contrast for the native WordPress select because its background uses an image; this is an inconclusive check, not a passing contrast measurement. See [machine-readable audit evidence](evidence/0.1.0/axe-2026-11-05.json).
+
+This automated check did not find a plugin-owned defect, so the `v0.1.0` ZIP, tag, and release branch were not changed. It does not replace a human screen-reader pass or a representative site content review.
