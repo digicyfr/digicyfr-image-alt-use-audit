@@ -1,13 +1,22 @@
-# Local QA — 0.1.0
+# QA — 0.1.0
 
 ## Current GitHub repository candidate (2026-11-05)
 
-- ZIP: `dist/digicyfr-image-alt-use-audit-0.1.0.zip`
+- ZIP: `digicyfr-image-alt-use-audit-0.1.0.zip` from the public GitHub `v0.1.0` prerelease; the local release candidate has the same SHA-256.
 - SHA-256: `fcfe2ea4d925a078edfc722c27361bfbcc58ae0acee9d97c88c6b10c490e9385`
 - The new repository snapshot adds a per-plugin GitHub `Plugin URI`, updates packaged README instructions, and adds standalone build/verification tools, Docker harness, CI, contribution/security policies and release notes outside the ZIP. Scanner, storage, authorization and admin behavior are unchanged.
 - Both standalone and workspace `verify_zip.py --against-source` passed on this ZIP; its `.sha256` sidecar passed. PHP and JavaScript syntax checks passed.
 - Fresh disposable WordPress 7.1/PHP 8.3.33 install, activation/deactivation/reactivation, and the exact-ZIP 1,000-post integration run passed. The adapted standalone Docker harness was exercised locally. Manual screen-reader validation is still outstanding.
-- The browser and Plugin Check results below were collected on the earlier candidate hash; they were not rerun on the current packaged README/header revision. GitHub Actions has not yet run because the repository is not published.
+- The Plugin Check results below were collected on the earlier candidate hash and were not rerun on the current packaged README/header revision. The exact public GitHub ZIP browser run below closes that browser evidence gap. GitHub Actions passed on the release tag and branch.
+
+## Post-tag browser QA on the exact public GitHub ZIP (2026-11-05)
+
+- Downloaded both release assets from `https://github.com/digicyfr/digicyfr-image-alt-use-audit/releases/tag/v0.1.0`; `sha256sum --check` passed. ZIP SHA-256: `fcfe2ea4d925a078edfc722c27361bfbcc58ae0acee9d97c88c6b10c490e9385`.
+- Installed, activated, deactivated and reactivated that downloaded ZIP in a fresh disposable WordPress 7.1/PHP 8.3.33/MariaDB 11.4.13 site. The four synthetic published posts contained saved `img` tags with missing, empty, present and whitespace-only `alt`; no real business content or image files were used.
+- Chromium admin session started a scan and completed one bounded batch. The auto-run Pause link received focus on the queued screen. The complete report showed four saved uses with one row and one count for each synthetic alt state; six published posts were processed, with zero skipped and zero unsupported coverage notes. The [complete scan](evidence/0.1.0/complete-scan.png) and [full report](evidence/0.1.0/report-all.png) are captured.
+- The [missing-alt filter](evidence/0.1.0/missing-filter.png) showed only the matching source. **Export selected CSV** downloaded a header plus that one matching row, excluding the other three fixture posts.
+- At a 390px viewport, the [report](evidence/0.1.0/report-390px.png) and [overview](evidence/0.1.0/overview-390px.png) had document width 390px with no page overflow. The report table itself scrolls inside its container. The browser recorded no page script errors.
+- This verifies a synthetic admin browser flow and layout. Manual NVDA/VoiceOver testing and a representative content/site review remain open; the plugin does not assess whether alt text is good or whether an image is decorative.
 
 ## Earlier candidate evidence (ZIP SHA-256 a8388cb4b05d66e13d72abc9aff056dea73546175514c659c6a4664c49ce47e3)
 
@@ -34,4 +43,4 @@
 
 - This audit checks saved `post_content` only. It does not inspect rendered theme output, dynamic blocks, synced block contents, CSS backgrounds, widgets, templates, page-builder data outside `post_content`, or every public filter. A `complete_with_skips`, failed, cancelled, or active run cannot establish that the site is clear.
 - The scan is a high-water ID walk, not an immutable publication snapshot. Published status and edits may change while it runs. Source rows become stale or deleted after later changes.
-- No digicyfr.com publication, GitHub release, WordPress.org submission, or live-site installation was performed.
+- A public GitHub prerelease exists. No digicyfr.com production publication, WordPress.org submission, or live customer-site installation was performed.

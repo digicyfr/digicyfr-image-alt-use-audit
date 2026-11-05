@@ -6,7 +6,7 @@ Inventory saved image uses and their alt states in published posts and pages; bo
 
 ## Requirements and tested stack
 
-Requires WordPress 7.1+, PHP 8.3+ and InnoDB. WordPress 7.1, PHP 8.3.33, MariaDB 11.4.13. Browser keyboard and 390px checks passed. Manual screen-reader validation is outstanding.
+Requires WordPress 7.1+, PHP 8.3+ and InnoDB. WordPress 7.1, PHP 8.3.33, MariaDB 11.4.13. On 2026-11-05, the exact public GitHub release ZIP passed a fresh synthetic Chromium admin scan, four-state report, selected CSV, focus and 390px layout check; see [QA evidence](docs/QA-0.1.0.md). Earlier Plugin Check results were from a prior ZIP candidate, so Plugin Check on the released ZIP remains an open verification item. Manual screen-reader and representative site validation are also outstanding.
 
 ## Known limits
 
