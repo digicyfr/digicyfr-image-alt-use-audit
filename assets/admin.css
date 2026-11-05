@@ -1,0 +1,10 @@
+.diau-wrap section { border: 1px solid #c3c4c7; margin-block: 1em; padding: 1em; max-width: 65em; }
+.diau-wrap form { margin-block: 0.75em; }
+.diau-wrap form label { margin-right: 0.4em; }
+.diau-wrap form select, .diau-wrap form input[type="number"] { margin-right: 1em; }
+.diau-inline { padding: 0.65em; }
+.diau-counts { display: flex; flex-wrap: wrap; gap: 0.5em; margin-block: 1em; }
+.diau-counts span { border: 1px solid #c3c4c7; padding: 0.4em 0.6em; }
+.diau-table-scroll { max-width: 100%; overflow-x: auto; }
+.diau-table { min-width: 60em; }
+.diau-table th, .diau-table td { vertical-align: top; overflow-wrap: anywhere; }

@@ -1,0 +1,283 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Digicyfr Image Alt Use Audit 0.1.0\n"
+"Language: pl_PL\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+
+msgid "50,000 stored-use limit reached; scan incomplete"
+msgstr "Osiągnięto limit 50 000 zapisanych użyć; skan jest niepełny"
+
+msgid "A private, bounded inventory of saved image uses and their alt attributes."
+msgstr "Prywatny, ograniczony wykaz zapisanych użyć obrazów i ich atrybutów alt."
+
+msgid "All saved uses"
+msgstr "Wszystkie zapisane użycia"
+
+msgid "Alt present"
+msgstr "Tekst alt obecny"
+
+msgid "Alt preview"
+msgstr "Podgląd alt"
+
+msgid "Alt state"
+msgstr "Stan alt"
+
+msgid "Another scan action is in progress. Try again."
+msgstr "Trwa inne działanie skanu. Spróbuj ponownie."
+
+msgid "Apply filters"
+msgstr "Zastosuj filtry"
+
+msgid "Back to scan overview"
+msgstr "Wróć do przeglądu skanów"
+
+msgid "Block / path / image"
+msgstr "Blok / ścieżka / obraz"
+
+msgid "Block nesting exceeds safety limit; skipped"
+msgstr "Zagnieżdżenie bloków przekracza limit bezpieczeństwa; pominięto"
+
+msgid "Cancel scan"
+msgstr "Anuluj skan"
+
+msgid "Cancelled"
+msgstr "Anulowano"
+
+msgid "Complete"
+msgstr "Zakończono"
+
+msgid "Continue one bounded batch"
+msgstr "Kontynuuj jedną ograniczoną partię"
+
+msgid "Could not begin a safe scan transaction."
+msgstr "Nie udało się rozpocząć bezpiecznej transakcji skanu."
+
+msgid "Could not cancel the scan."
+msgstr "Nie udało się anulować skanu."
+
+msgid "Could not create the scan record."
+msgstr "Nie udało się utworzyć rekordu skanu."
+
+msgid "Could not open the CSV output stream."
+msgstr "Nie udało się otworzyć strumienia wyjściowego CSV."
+
+msgid "Cover background or dynamic cover has no saved img; outside scope"
+msgstr "Tło okładki lub dynamiczna okładka nie ma zapisanego img; poza zakresem"
+
+msgid "Coverage is incomplete. These results cannot establish a clean site."
+msgstr "Zakres skanu jest niepełny. Te wyniki nie potwierdzają, że witryna nie ma problemów."
+
+msgid "Current"
+msgstr "Aktualne"
+
+msgid "Deleted source"
+msgstr "Usunięte źródło"
+
+msgid "Edit source"
+msgstr "Edytuj źródło"
+
+msgid "Edit the saved image use in its source post or page. Media Library alt metadata does not override the alt saved on each use. Empty alt may be suitable for decoration; only an editor can judge context."
+msgstr "Edytuj zapisane użycie obrazu we wpisie lub stronie źródłowej. Tekst alt w Bibliotece mediów nie zastępuje tekstu alt zapisanego przy każdym użyciu. Pusty alt może być odpowiedni dla dekoracji; kontekst musi ocenić redaktor."
+
+msgid "Empty alt — review purpose"
+msgstr "Pusty alt — sprawdź cel obrazu"
+
+msgid "Export selected CSV"
+msgstr "Eksportuj wybrany CSV"
+
+msgid "Failed"
+msgstr "Nie powiodło się"
+
+msgid "Featured image may be theme-rendered; outside saved content scope"
+msgstr "Obrazek wyróżniający może być wyświetlany przez motyw; poza zakresem zapisanej treści"
+
+msgid "Finish or cancel the current scan first."
+msgstr "Najpierw zakończ lub anuluj bieżący skan."
+
+msgid "ID cursor / high-water:"
+msgstr "Kursor ID / górna granica:"
+
+msgid "Image Alt Use Audit"
+msgstr "Audyt użyć obrazów i alt"
+
+msgid "Image Alt Use Audit requires InnoDB tables for safe resumable scans."
+msgstr "Audyt użyć obrazów i alt wymaga tabel InnoDB do bezpiecznego wznawiania skanów."
+
+msgid "Image hint"
+msgstr "Wskazówka obrazu"
+
+msgid "Incomplete — skipped or unsupported content"
+msgstr "Niepełny — pominięta lub nieobsługiwana treść"
+
+msgid "Invalid alt — needs review"
+msgstr "Nieprawidłowy alt — wymaga sprawdzenia"
+
+msgid "Last successful batch (UTC):"
+msgstr "Ostatnia udana partia (UTC):"
+
+msgid "Latest scan"
+msgstr "Ostatni skan"
+
+msgid "Missing alt"
+msgstr "Brak alt"
+
+msgid "More than 300 saved images; skipped"
+msgstr "Ponad 300 zapisanych obrazów; pominięto"
+
+msgid "Next page"
+msgstr "Następna strona"
+
+msgid "No saved image uses match this filter. Review the scan coverage before drawing conclusions."
+msgstr "Brak zapisanych użyć obrazów pasujących do filtra. Przed wnioskowaniem sprawdź zakres skanu."
+
+msgid "Pause automatic batches"
+msgstr "Wstrzymaj automatyczne partie"
+
+msgid "Post ID (optional)"
+msgstr "ID wpisu (opcjonalnie)"
+
+msgid "Post content exceeds 512 KiB; skipped"
+msgstr "Treść wpisu przekracza 512 KiB; pominięto"
+
+msgid "Previous complete report"
+msgstr "Poprzedni kompletny raport"
+
+msgid "Previous page"
+msgstr "Poprzednia strona"
+
+msgid "Processed posts:"
+msgstr "Przetworzone wpisy:"
+
+msgid "Queued"
+msgstr "W kolejce"
+
+msgid "Running"
+msgstr "W trakcie"
+
+msgid "Saved HTML"
+msgstr "Zapisany HTML"
+
+msgid "Saved HTML (%s)"
+msgstr "Zapisany HTML (%s)"
+
+msgid "Saved image uses"
+msgstr "Zapisane użycia obrazów"
+
+msgid "Saved image uses:"
+msgstr "Zapisane użycia obrazów:"
+
+msgid "Scan action failed. Check the scan status and try again."
+msgstr "Działanie skanu nie powiodło się. Sprawdź stan skanu i spróbuj ponownie."
+
+msgid "Scan action recorded."
+msgstr "Zapisano działanie skanu."
+
+msgid "Scan tables must use InnoDB."
+msgstr "Tabele skanu muszą używać InnoDB."
+
+msgid "Scope excludes theme featured images, CSS backgrounds, synced block contents, dynamic output, templates, widgets, page-builder data outside post_content, and later public filters. A partial scan never means the site is clear."
+msgstr "Zakres nie obejmuje obrazków wyróżniających motywu, teł CSS, zawartości bloków synchronizowanych, dynamicznych wyników, szablonów, widżetów, danych kreatorów stron poza post_content ani późniejszych filtrów publicznych. Częściowy skan nie oznacza braku problemów w witrynie."
+
+msgid "Skipped and unsupported coverage"
+msgstr "Pominięty i nieobsługiwany zakres"
+
+msgid "Skipped posts:"
+msgstr "Pominięte wpisy:"
+
+msgid "Source"
+msgstr "Źródło"
+
+msgid "Source changed during scan; skipped"
+msgstr "Źródło zmieniło się podczas skanu; pominięto"
+
+msgid "Source status"
+msgstr "Stan źródła"
+
+msgid "Stale — rescan needed"
+msgstr "Nieaktualne — wymagany ponowny skan"
+
+msgid "Start a new scan"
+msgstr "Rozpocznij nowy skan"
+
+msgid "Started (UTC):"
+msgstr "Rozpoczęto (UTC):"
+
+msgid "Synced block reference; referenced content outside scope"
+msgstr "Odwołanie do bloku synchronizowanego; powiązana treść poza zakresem"
+
+msgid "The 50,000-use limit stopped this scan. Posts after the ID cursor were not scanned."
+msgstr "Limit 50 000 użyć zatrzymał skan. Wpisy po kursorze ID nie zostały przeskanowane."
+
+msgid "The scan failed. The previous complete report is still available."
+msgstr "Skan nie powiódł się. Poprzedni kompletny raport nadal jest dostępny."
+
+msgid "This local audit inspects saved img tags in published posts and pages. Empty alt may be appropriate for a decorative image; an editor must decide. No alt text is changed."
+msgstr "Ten lokalny audyt sprawdza zapisane znaczniki img w opublikowanych wpisach i stronach. Pusty alt może być odpowiedni dla obrazu dekoracyjnego; decyzję podejmuje redaktor. Tekst alt nie jest zmieniany."
+
+msgid "This scan is no longer running."
+msgstr "Ten skan już nie trwa."
+
+msgid "This scan report is unavailable."
+msgstr "Ten raport skanu jest niedostępny."
+
+msgid "Unknown scan action."
+msgstr "Nieznane działanie skanu."
+
+msgid "Unknown status"
+msgstr "Nieznany stan"
+
+msgid "Unsupported coverage notes:"
+msgstr "Uwagi o nieobsługiwanym zakresie:"
+
+msgid "Unsupported or skipped source"
+msgstr "Nieobsługiwane lub pominięte źródło"
+
+msgid "View latest scan report"
+msgstr "Wyświetl raport ostatniego skanu"
+
+msgid "View previous complete report"
+msgstr "Wyświetl poprzedni kompletny raport"
+
+msgid "While this page stays open, JavaScript continues one bounded batch per request. You may close it and resume later. Cancel stops the run."
+msgstr "Gdy ta strona jest otwarta, JavaScript kontynuuje jedną ograniczoną partię na żądanie. Możesz zamknąć stronę i wznowić skan później. Anulowanie zatrzymuje skan."
+
+msgid "Whitespace-only alt"
+msgstr "Alt z samymi odstępami"
+
+msgid "You cannot cancel this scan."
+msgstr "Nie możesz anulować tego skanu."
+
+msgid "You cannot continue this scan."
+msgstr "Nie możesz kontynuować tego skanu."
+
+msgid "You cannot manage this audit."
+msgstr "Nie możesz zarządzać tym audytem."
+
+msgid "You cannot start this scan."
+msgstr "Nie możesz rozpocząć tego skanu."
+
+msgid "You cannot view this audit."
+msgstr "Nie możesz wyświetlić tego audytu."
+
+msgid "Could not read scan records. Existing reports were retained."
+msgstr "Nie można odczytać zapisów skanów. Istniejące raporty zachowano."
+
+msgid "Could not read eligible posts. No scan was started."
+msgstr "Nie można odczytać kwalifikujących się wpisów. Skan nie został rozpoczęty."
+
+msgid "Scan records could not be read. Existing report pointers were retained; retry later."
+msgstr "Nie można odczytać zapisów skanów. Odwołania do istniejących raportów zachowano; spróbuj ponownie później."
+
+msgid "Could not read saved image uses. Retry later."
+msgstr "Nie można odczytać zapisanych użyć obrazów. Spróbuj ponownie później."
+
+msgid "Could not read report counts. Retry later."
+msgstr "Nie można odczytać liczników raportu. Spróbuj ponownie później."
+
+msgid "Could not read coverage notes. Retry later."
+msgstr "Nie można odczytać uwag o zakresie. Spróbuj ponownie później."
+
+msgid "Could not read the full CSV report. Retry later."
+msgstr "Nie można odczytać pełnego raportu CSV. Spróbuj ponownie później."

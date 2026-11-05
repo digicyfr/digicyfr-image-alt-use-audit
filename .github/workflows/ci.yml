@@ -1,0 +1,42 @@
+name: Release checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lint-and-package:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v6.1.0
+      - name: Check PHP syntax
+        run: |
+          find . -type f -name '*.php' -not -path './dist/*' -print0 | xargs -0 -r -n1 php -l
+      - name: Check JavaScript syntax
+        run: |
+          find assets -type f -name '*.js' -print0 | xargs -0 -r -n1 node --check
+      - name: Build and verify deterministic release ZIP
+        shell: bash
+        run: |
+          set -euo pipefail
+          slug="${GITHUB_REPOSITORY##*/}"
+          python3 tools/build_plugin.py "$slug" --output-dir "$RUNNER_TEMP/first"
+          archive="$(find "$RUNNER_TEMP/first" -maxdepth 1 -name "$slug-*.zip" -print -quit)"
+          test -n "$archive"
+          python3 tools/verify_zip.py "$archive" --slug "$slug" --against-source
+          (cd "$RUNNER_TEMP/first" && sha256sum --check "${archive##*/}.sha256")
+          python3 tools/build_plugin.py "$slug" --output-dir "$RUNNER_TEMP/second"
+          cmp "$archive" "$RUNNER_TEMP/second/${archive##*/}"
+      - name: Exact-ZIP WordPress integration
+        shell: bash
+        run: |
+          set -euo pipefail
+          slug="${GITHUB_REPOSITORY##*/}"
+          archive="$(find "$RUNNER_TEMP/first" -maxdepth 1 -name "$slug-*.zip" -print -quit)"
+          test -n "$archive"
+          bash tests/run-wordpress-integration.sh "$archive"

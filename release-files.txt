@@ -1,0 +1,11 @@
+# Runtime files and user documentation only.
+digicyfr-image-alt-use-audit.php
+includes
+assets
+languages/digicyfr-image-alt-use-audit-pl_PL.po
+languages/digicyfr-image-alt-use-audit-pl_PL.mo
+uninstall.php
+readme.txt
+README.md
+CHANGELOG.md
+LICENSE
