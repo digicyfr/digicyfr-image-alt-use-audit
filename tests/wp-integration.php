@@ -171,7 +171,12 @@ check( false === fgetcsv( $stream, 0, ',', '"', '' ), 'CSV contains selected row
 fclose( $stream );
 
 // A saved result becomes stale after editing and deleted after removing its source.
-wp_update_post( array( 'ID' => $missing, 'post_content' => '<p>Changed</p>', 'post_modified' => '2028-01-01 00:00:00', 'post_modified_gmt' => '2028-01-01 00:00:00', 'edit_date' => true ) );
+$edited = wp_update_post( array( 'ID' => $missing, 'post_content' => '<p>Changed</p>' ), true );
+check( $missing === $edited && '<p>Changed</p>' === get_post( $missing )->post_content, 'source edit persisted' );
+// WordPress timestamps have one-second precision, so an immediate edit can retain the scan timestamp.
+$changed_at = '2000-01-01 00:00:00' === $missing_rows[0]['post_modified_gmt'] ? '2001-01-01 00:00:00' : '2000-01-01 00:00:00';
+check( 1 === $wpdb->update( $wpdb->posts, array( 'post_modified_gmt' => $changed_at ), array( 'ID' => $missing ) ), 'source modification timestamp changed' );
+clean_post_cache( $missing );
 check( 'stale' === DIAU_Admin::source_status( $missing_rows[0] ), 'edited source marked stale' );
 wp_delete_post( $missing, true );
 check( 'deleted' === DIAU_Admin::source_status( $missing_rows[0] ), 'deleted source marked deleted' );
